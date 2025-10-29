@@ -4,10 +4,6 @@ import { FormControl, FormField, FormItem, FormLabel } from "../ui/form"
 import { useFormContext, useWatch } from "react-hook-form"
 import { FormType } from "@/schema"
 import { Switch } from "../ui/switch"
-import { Label } from "../ui/label"
-import { useState } from "react"
-import { formatCurrency } from "@/lib/utils"
-
 
 const plans = [
   {
@@ -65,7 +61,7 @@ export default function FormPlanFields() {
               >
 
                 {
-                  plans.map((plan, index) => {
+                  plans.map((plan) => {
 
                     const isSelected = field.value === plan.value
 

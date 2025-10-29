@@ -6,6 +6,7 @@ import { useForm } from "react-hook-form";
 import { Form } from "../ui/form";
 import FormPersonalFields from "./FormPersonalFields";
 import FormPlanFields from "./FormPlanFields";
+import FormAddonsFields from "./FormAddonsFields";
 
 export default function FormComponent() {
 
@@ -36,6 +37,7 @@ export default function FormComponent() {
 
             <FormPersonalFields />
             <FormPlanFields />
+            <FormAddonsFields />
 
 
           </form>
