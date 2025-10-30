@@ -72,7 +72,7 @@ export default function FormPlanFields() {
                       <FormItem key={plan.value}>
                         <FormLabel>
 
-                          <div className={`flex items-start gap-4 md:flex-col w-full p-4 rounded-lg ${isSelected ? "outline-indigo-900 bg-indigo-50 outline" : "outline-2"}`}>
+                          <div className={`flex items-start gap-4 md:flex-col w-full p-4 rounded-lg shadow-md ${isSelected ? "border-indigo-900 bg-indigo-50 border" : "border"}`}>
                             <div className="h-[50px]">
                               <img className="h-full" src={plan.icon} />
                             </div>

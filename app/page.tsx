@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <main>
 
-      <div className="container mx-auto h-screen p-4">
+      <div className="container mx-auto max-w-5xl bg-gray-100">
 
         <FormComponent />
       </div>
