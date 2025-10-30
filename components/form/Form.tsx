@@ -50,22 +50,42 @@ export default function FormComponent() {
     }
   }, [currentStep])
 
+
+  const onSubmit = (formData: FormType) => {
+
+    setTimeout(() => {
+      
+      resetSteps()
+      form.reset()
+    }, 10000);
+
+  }
+
   return (
 
     <div className="min-h-dvh flex">
       <Form {...form}>
-        <form className="flex flex-col grow justify-between">
+        <form className="flex flex-col grow justify-between" onSubmit={form.handleSubmit(onSubmit)}>
+
           <div className="mt-8">
             <div className="flex justify-center">
               <StepProgressBar steps={steps} currentStep={currentStep} onStepClick={handleStepClick} />
             </div>
 
             <div className="bg-white m-4 rounded-lg px-6 py-8 shadow-md">
-              <StepProgressLabel steps={steps} currentStep={currentStep} />
+
+              {
+                !form.formState.isSubmitSuccessful && (
+                  <StepProgressLabel steps={steps} currentStep={currentStep} />
+                ) 
+              }
+
               <div className="space-y-6">
                 {renderStep}
               </div>
             </div>
+
+
           </div>
 
           {/* Footer fijo al fondo */}
