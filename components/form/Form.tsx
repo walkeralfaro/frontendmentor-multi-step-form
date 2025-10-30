@@ -51,7 +51,7 @@ export default function FormComponent() {
 
   return (
 
-    <div className="min-h-screen flex">
+    <div className="min-h-dvh flex">
       <Form {...form}>
         <form className="flex flex-col grow justify-between">
           <div className="mt-8">
