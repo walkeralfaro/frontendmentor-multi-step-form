@@ -30,4 +30,10 @@ export const FormSteps: Step[] = [
     disabled: false,
     description: "Add-ons help enhance your gaming experience."
   },
+  {
+    title: 'Finishing up',
+    fields: [],
+    disabled: false,
+    description: "Double-check everything looks OK before confirming."
+  },
 ]

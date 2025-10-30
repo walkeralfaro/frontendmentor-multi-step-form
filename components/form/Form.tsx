@@ -13,6 +13,7 @@ import { useMemo } from "react";
 import { Button } from "../ui/button";
 import StepProgressBar from "../app/step-progress-bar";
 import StepProgressLabel from "../app/step-progress-label";
+import FormFinish from "./FormFinish";
 
 export default function FormComponent() {
 
@@ -42,12 +43,12 @@ export default function FormComponent() {
         return <FormPlanFields />
       case 2:
         return <FormAddonsFields />
+      case 3:
+        return <FormFinish />
       default:
         return null
     }
   }, [currentStep])
-
-
 
   return (
 
@@ -59,7 +60,7 @@ export default function FormComponent() {
               <StepProgressBar steps={steps} currentStep={currentStep} onStepClick={handleStepClick} />
             </div>
 
-            <div className="bg-white m-4 rounded-lg px-6 py-8 ">
+            <div className="bg-white m-4 rounded-lg px-6 py-8 shadow-md">
               <StepProgressLabel steps={steps} currentStep={currentStep} />
               <div className="space-y-6">
                 {renderStep}
