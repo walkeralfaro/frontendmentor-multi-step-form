@@ -7,6 +7,7 @@ export interface Step {
   description?: string;
   disabled?: boolean;
   fields: string[];
+  side_description: string;
 }
 
 export function useFormSteps<T extends object>(form: UseFormReturn<T>, steps: Step[]) {
@@ -65,7 +66,8 @@ export function useFormSteps<T extends object>(form: UseFormReturn<T>, steps: St
     steps: steps.map(step => ({
       description: step.description,
       title: step.title,
-      disabled: step.disabled
+      disabled: step.disabled,
+      side_description: step.side_description,
     })),
     validateStep,
     handleNext,

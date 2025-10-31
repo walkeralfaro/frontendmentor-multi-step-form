@@ -1,6 +1,7 @@
 interface Step {
   title: string
   description?: string
+  side_description: string
 }
 
 interface StepProgressProps {
@@ -14,11 +15,12 @@ export default function StepProgressBar({ steps, currentStep, onStepClick, disab
   return (
 
 
-      <div className="flex gap-3 md:flex-col">
-        {
-          steps.map((_, index) => (
+    <div className="flex gap-3 md:flex-col md:gap-5 2xl:gap-10">
+      {
+        steps.map((step, index) => (
+          <div key={index} className="flex gap-4 items-center">
+
             <button
-              key={index}
               type="button"
               onClick={() => onStepClick(index)}
               disabled={disabled}
@@ -26,9 +28,16 @@ export default function StepProgressBar({ steps, currentStep, onStepClick, disab
             >
               <p className="text-lg">{index + 1}</p>
             </button>
-          ))
-        }
-      </div>
-    
+
+            <div className="hidden md:flex md:flex-col ">
+              <h4 className="text-gray-400  2xl:text-lg">Step <span>{index + 1}</span> </h4>
+              <p className="text-gray-100 uppercase 2xl:text-xl">{step.side_description}</p>
+            </div>
+
+          </div>
+        ))
+      }
+    </div>
+
   )
 }

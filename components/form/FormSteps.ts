@@ -9,7 +9,8 @@ export const FormSteps: Step[] = [
       'phone'
     ],
     disabled: false,
-    description: "Please provide your name, email, adderss and phone number."
+    description: "Please provide your name, email, adderss and phone number.",
+    side_description: "your info"
   },
   {
     title: 'Select your plan',
@@ -18,7 +19,8 @@ export const FormSteps: Step[] = [
       'period'
     ],
     disabled: false,
-    description: "You have the option of monthly or yearly billing."
+    description: "You have the option of monthly or yearly billing.",
+    side_description: "select plan"
   },
   {
     title: 'Pick add-ons',
@@ -28,12 +30,14 @@ export const FormSteps: Step[] = [
       'customizableprofile',
     ],
     disabled: false,
-    description: "Add-ons help enhance your gaming experience."
+    description: "Add-ons help enhance your gaming experience.",
+    side_description: "add-ons"
   },
   {
     title: 'Finishing up',
     fields: [],
     disabled: false,
-    description: "Double-check everything looks OK before confirming."
+    description: "Double-check everything looks OK before confirming.",
+    side_description: "summary"
   },
 ]

@@ -115,11 +115,13 @@ export default function FormComponent() {
                     !form.formState.isSubmitSuccessful ? (
                       <StepProgressLabel steps={steps} currentStep={currentStep} />
                     ) : (
-                      <div className="text-center flex flex-col gap-3 items-center py-10">
-                        <Image src="/icon-thank-you.svg" width={60} height={60} alt="Thanks Image" priority />
-                        <h3 className="text-blue-950 text-xl font-black mt-3">Thank you!</h3>
-                        <p className="text-gray-400">Thanks for confirming you subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
-                        <Progress value={progress} className="w-[40%] mt-6" />
+                      <div className="text-center flex flex-col gap-3 2xl:gap-8 items-center">
+                        <div className="relative w-[60] h-[60] md:w-[80] md:h-[80] 2xl:w-[95] 2xl:h-[95]">
+                          <Image src="/icon-thank-you.svg" fill alt="Thanks Image" priority />
+                        </div>
+                        <h3 className="text-blue-950 text-xl font-black mt-3 md:mt-8 md:text-3xl 2xl:text-5xl">Thank you!</h3>
+                        <p className="text-gray-400 md:text-lg 2xl:text-xl">Thanks for confirming you subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+                        <Progress value={progress} className="w-[40%] mt-6 " />
                       </div>
                     )
                   }
@@ -168,7 +170,6 @@ export default function FormComponent() {
               </div>
             </div>
           </div>
-
 
           {/* Buttons Mobile */}
           <div className="bg-white flex justify-between items-center p-5 md:hidden">
