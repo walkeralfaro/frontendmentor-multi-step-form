@@ -4,6 +4,7 @@ import { FormControl, FormField, FormItem, FormLabel } from "../ui/form"
 import { useFormContext, useWatch } from "react-hook-form"
 import { FormType } from "@/schema"
 import { Switch } from "../ui/switch"
+import Image from "next/image"
 
 const plans = [
   {
@@ -74,7 +75,7 @@ export default function FormPlanFields() {
 
                           <div className={`flex items-start gap-4 md:flex-col w-full p-4 rounded-lg shadow-xs ${isSelected ? "border-indigo-900 bg-indigo-50 border" : "border"}`}>
                             <div className="h-[50px]">
-                              <img className="h-full" src={plan.icon} />
+                              <Image width={45} height={45} src={plan.icon} alt={plan.title} priority />
                             </div>
                             <div>
                               <h3 className="text-blue-950 text-lg">{plan.title}</h3>

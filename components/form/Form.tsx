@@ -15,6 +15,7 @@ import StepProgressBar from "../app/step-progress-bar";
 import StepProgressLabel from "../app/step-progress-label";
 import FormFinish from "./FormFinish";
 import { Progress } from "../ui/progress";
+import Image from "next/image";
 
 export default function FormComponent() {
 
@@ -102,7 +103,7 @@ export default function FormComponent() {
                   <StepProgressLabel steps={steps} currentStep={currentStep} />
                 ) : (
                   <div className="text-center flex flex-col gap-3 items-center py-10">
-                    <img src='/icon-thank-you.svg' className="w-12"></img>
+                    <Image src="/icon-thank-you.svg" width={60} height={60} alt="Thanks Image" priority />
                     <h3 className="text-blue-950 text-xl font-black mt-3">Thank you!</h3>
                     <p className="text-gray-400">Thanks for confirming you subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
                     <Progress value={progress} className="w-[40%] mt-6" />

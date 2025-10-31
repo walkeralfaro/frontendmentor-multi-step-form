@@ -40,25 +40,10 @@ export default function FormFinish() {
   if (largerstorage) total += addons.largerstorage[period];
   if (customizableprofile) total += addons.customizableprofile[period];
 
-  // useEffect(() => {
-  //   const timer = setInterval(() => {
-  //     setProgress((prev) => {
-  //       if (prev >= 100) {
-  //         clearInterval(timer)
-  //         return 100
-  //       }
-  //       return prev + 1
-  //     })
-  //   }, 100)
-
-  //   return () => clearInterval(timer)
-  // }, [isSubmitSuccessful])
-
   return (
-    < >
-
+    <>
       {
-        !isSubmitSuccessful ? (
+        !isSubmitSuccessful && (
           <div>
             <div className=" bg-gray-100 rounded-md p-4 space-y-2">
               <div className="flex justify-between items-center">
@@ -97,26 +82,12 @@ export default function FormFinish() {
 
             </div>
 
-
             <div className="flex justify-between items-center px-4 mt-5">
               <p className="text-sm text-gray-400">Total <span> ({periodTotal}) </span> </p>
               <p className="text-md text-indigo-500 font-bold">+${total}<span>/{periodMinText}</span> </p>
             </div>
 
           </div>
-
-        ) : (
-
-          // <div className="text-center flex flex-col gap-3 items-center py-10">
-          //   <img src='/icon-thank-you.svg' className="w-12"></img>
-          //   <h3 className="text-blue-950 text-xl font-black mt-3">Thank you!</h3>
-
-          //   <p className="text-gray-400">Thanks for confirming you subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
-
-          //   <Progress value={progress} className="w-[40%] mt-6" />
-          // </div>
-          <div></div>
-
 
         )
       }
