@@ -14,7 +14,7 @@ export default function StepProgressBar({ steps, currentStep, onStepClick, disab
   return (
 
 
-      <div className="flex gap-3">
+      <div className="flex gap-3 md:flex-col">
         {
           steps.map((_, index) => (
             <button

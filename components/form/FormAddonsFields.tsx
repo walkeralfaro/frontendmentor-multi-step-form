@@ -47,25 +47,25 @@ export default function FormAddonsFields() {
               control={control}
               name={addon.name as keyof FormType}
               render={({ field }) => (
-                <FormItem className="mb-3">
-                  <Label className="hover:bg-accent/50 flex gap-3 rounded-lg border p-4 has-aria-checked:border-indigo-600 has-aria-checked:bg-blue-50 dark:has-aria-checked:border-blue-900 dark:has-aria-checked:bg-blue-950">
+                <FormItem className="mb-3 2xl:mb-6">
+                  <Label className="hover:bg-accent/50 flex gap-3 2xl:gap-6 rounded-lg border p-4 has-aria-checked:border-indigo-600 has-aria-checked:bg-blue-50 dark:has-aria-checked:border-blue-900 dark:has-aria-checked:bg-blue-950">
                     <Checkbox
                       id={addon.name}
                       checked={!!field.value}
                       
                       onCheckedChange={field.onChange}
-                      className="data-[state=checked]:border-indigo-600 data-[state=checked]:bg-indigo-600 data-[state=checked]:text-white dark:data-[state=checked]:border-blue-700 dark:data-[state=checked]:bg-blue-700"
+                      className="data-[state=checked]:border-indigo-600 data-[state=checked]:bg-indigo-600 data-[state=checked]:text-white dark:data-[state=checked]:border-blue-700 dark:data-[state=checked]:bg-blue-700 2xl:h-8 2xl:w-8"
                     />
                     <div className="flex gap-3 justify-between items-center w-full">
                       <div>
-                        <p className="text-base text-blue-950">
+                        <p className="text-base text-blue-950 2xl:text-2xl">
                           {addon.title}
                         </p>
-                        <p className="text-gray-400">
+                        <p className="text-gray-400 2xl:text-xl">
                           {addon.description}
                         </p>
                       </div>
-                      <p className="text-indigo-700">{'+$'}{price}<span>{periodText}</span> </p>
+                      <p className="text-indigo-700 2xl:text-xl">{'+$'}{price}<span>{periodText}</span> </p>
                     </div>
                   </Label>
 

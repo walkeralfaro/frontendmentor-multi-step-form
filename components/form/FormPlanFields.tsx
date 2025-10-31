@@ -58,7 +58,7 @@ export default function FormPlanFields() {
               <RadioGroup
                 onValueChange={field.onChange}
                 defaultValue={field.value}
-                className="flex flex-col gap-5"
+                className="flex flex-col gap-5 md:flex-row md:justify-between"
               >
 
                 {
@@ -73,13 +73,13 @@ export default function FormPlanFields() {
                       <FormItem key={plan.value}>
                         <FormLabel>
 
-                          <div className={`flex items-start gap-4 md:flex-col w-full p-4 rounded-lg shadow-xs ${isSelected ? "border-indigo-900 bg-indigo-50 border" : "border"}`}>
-                            <div className="h-[50px]">
-                              <Image width={45} height={45} src={plan.icon} alt={plan.title} priority />
+                          <div className={`flex items-start gap-4 md:flex-col w-full p-4 rounded-lg shadow-xs md:w-[130] 2xl:w-[174] ${isSelected ? "border-indigo-900 bg-indigo-50 border" : "border"}`}>
+                            <div className="h-[45] w-[45] 2xl:h-[60] 2xl:w-[60] relative">
+                              <Image fill src={plan.icon} alt={plan.title} priority/>
                             </div>
-                            <div>
-                              <h3 className="text-blue-950 text-lg">{plan.title}</h3>
-                              <p className="text-gray-400 text-base">${price}<span>{periodText}</span></p>
+                            <div className="2xl:mt-8">
+                              <h3 className="text-blue-950 text-lg 2xl:text-xl">{plan.title}</h3>
+                              <p className="text-gray-400 text-base 2xl:text-lg">${price}<span>{periodText}</span></p>
                               {
                                 isYearly && <p className="mt-1 text-blue-900">{plan.message}</p>
                               }
@@ -101,7 +101,7 @@ export default function FormPlanFields() {
         )}
       />
 
-      <div className="flex justify-center p-4 bg-gray-100 rounded-lg">
+      <div className="flex justify-center p-4 bg-gray-100 rounded-lg 2xl:mt-10">
         <div className="flex items-center gap-4">
           <p className={` text-lg font-bold  ${!isYearly ? "text-blue-950" : "text-gray-400"}  `}>Monthly</p>
           <FormField

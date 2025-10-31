@@ -44,35 +44,35 @@ export default function FormFinish() {
     <>
       {
         !isSubmitSuccessful && (
-          <div>
-            <div className=" bg-gray-100 rounded-md p-4 space-y-2">
+          <div className="md:grow">
+            <div className=" bg-gray-100 rounded-md p-4 space-y-2 2xl:space-y-4 2xl:p-8">
               <div className="flex justify-between items-center">
-                <h3 className="text-sm text-blue-950 font-bold">{plans[plan].name} <span> ({periodText}) </span> </h3>
-                <p className="text-sm text-blue-950 font-bold">${plans[plan][period]}<span>/{periodMinText}</span> </p>
+                <h3 className="text-sm text-blue-950 font-bold 2xl:text-xl">{plans[plan].name} <span> ({periodText}) </span> </h3>
+                <p className="text-sm text-blue-950 font-bold 2xl:text-xl">${plans[plan][period]}<span>/{periodMinText}</span> </p>
               </div>
               <hr className="mx-4" />
 
               {
                 onlineservice &&
                 <div className="flex justify-between items-center">
-                  <p className="text-sm text-gray-400">Online service</p>
-                  <p className="text-sm text-blue-950">+${addons.onlineservice[period]}<span>/{periodMinText}</span></p>
+                  <p className="text-sm text-gray-400 2xl:text-xl">Online service</p>
+                  <p className="text-sm text-blue-950 2xl:text-xl">+${addons.onlineservice[period]}<span>/{periodMinText}</span></p>
                 </div>
               }
 
               {
                 largerstorage &&
                 <div className="flex justify-between items-center">
-                  <p className="text-sm text-gray-400">Larger storage</p>
-                  <p className="text-sm text-blue-950">+${addons.largerstorage[period]}<span>/{periodMinText}</span></p>
+                  <p className="text-sm text-gray-400 2xl:text-xl">Larger storage</p>
+                  <p className="text-sm text-blue-950 2xl:text-xl">+${addons.largerstorage[period]}<span>/{periodMinText}</span></p>
                 </div>
               }
 
               {
                 customizableprofile &&
                 <div className="flex justify-between items-center">
-                  <p className="text-sm text-gray-400">Customizable profile</p>
-                  <p className="text-sm text-blue-950">+${addons.customizableprofile[period]}<span>/{periodMinText}</span></p>
+                  <p className="text-sm text-gray-400 2xl:text-xl">Customizable profile</p>
+                  <p className="text-sm text-blue-950 2xl:text-xl">+${addons.customizableprofile[period]}<span>/{periodMinText}</span></p>
                 </div>
               }
 
@@ -83,8 +83,8 @@ export default function FormFinish() {
             </div>
 
             <div className="flex justify-between items-center px-4 mt-5">
-              <p className="text-sm text-gray-400">Total <span> ({periodTotal}) </span> </p>
-              <p className="text-md text-indigo-500 font-bold">+${total}<span>/{periodMinText}</span> </p>
+              <p className="text-sm text-gray-400 2xl:text-xl">Total <span> ({periodTotal}) </span> </p>
+              <p className="text-md text-indigo-500 font-bold 2xl:text-2xl">+${total}<span>/{periodMinText}</span> </p>
             </div>
 
           </div>
